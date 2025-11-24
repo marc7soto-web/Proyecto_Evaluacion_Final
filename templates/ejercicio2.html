@@ -1,10 +1,28 @@
+<!-- ============================================================
+     Archivo: templates/ejercicio2.html
+     Formulario de login con usuarios predefinidos
+     Usuarios: juan/admin (administrador), pepe/user (usuario)
+     ============================================================ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Inicio de sesión</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-$END$
+  <div class="container">
+    <h2>Inicio de sesión</h2>
+
+    <form method="post" class="form-card">
+      <label class="label" for="usuario">Ingresa tu nombre</label>
+      <input class="input" type="text" id="usuario" name="usuario" placeholder="Nombre de usuario" required>
+
+      <label class="label" for="clave">Ingresa tu contraseña</label>
+      <input class="input" type="password" id="clave" name="clave" placeholder="Contraseña" required>
+
+      <button class="btn" type="submit">Verificar</button>
+    </form>
+  </div>
 </body>
 </html>

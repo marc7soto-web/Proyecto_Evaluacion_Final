@@ -1,10 +1,21 @@
+<!-- ============================================================
+     Archivo: templates/resultado2.html
+     Muyestra el mensaje de bienvenida o el de error de credenciales
+     ============================================================ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Resultado login</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-$END$
+  <div class="container">
+    <h2>Resultado de autenticación</h2>
+    <div class="result">
+      <p>{{ mensaje }}</p>
+    </div>
+    <p><a href="{{ url_for('ejercicio2') }}">Volver al login</a> | <a href="{{ url_for('index') }}">Volver al menú</a></p>
+  </div>
 </body>
 </html>
