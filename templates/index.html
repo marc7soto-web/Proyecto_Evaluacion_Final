@@ -1,10 +1,23 @@
+<!-- ============================================================
+     Archivo: templates/index.html
+     Menú principal con dos botones (Ejercicio 1 y 2)
+     ============================================================ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Menú principal</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-$END$
+  <div class="container">
+    <h1>Menú principal</h1>
+    <p>Selecciona un ejercicio:</p>
+
+    <div class="menu">
+      <a id="ej1" href="{{ url_for('ejercicio1') }}">Ejercicio 1</a>
+      <a id="ej2" href="{{ url_for('ejercicio2') }}">Ejercicio 2</a>
+    </div>
+  </div>
 </body>
 </html>
