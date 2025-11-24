@@ -1,10 +1,30 @@
+<!-- ============================================================
+     Archivo: templates/resultado1.html
+     Muestra los resultados del cálculo de compra y descuentos
+     ============================================================ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Resultado compra</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-$END$
+  <div class="container">
+    <h2>Resultado del cálculo</h2>
+
+    <div class="result">
+      {% if error %}
+        <p class="error">{{ error }}</p>
+      {% endif %}
+
+      <p><strong>Nombre del cliente:</strong> {{ nombre }}</p>
+      <p><strong>Total sin descuento:</strong> ${{ '{:,.0f}'.format(total) }}</p>
+      <p><strong>El descuento es:</strong> ${{ '{:,.1f}'.format(descuento) }}</p>
+      <p><strong>El total a pagar es de:</strong> ${{ '{:,.1f}'.format(total_final) }}</p>
+    </div>
+
+    <p><a href="{{ url_for('ejercicio1') }}">Volver al formulario</a> | <a href="{{ url_for('index') }}">Volver al menú</a></p>
+  </div>
 </body>
 </html>

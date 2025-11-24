@@ -1,10 +1,31 @@
+<!-- ============================================================
+     Archivo: templates/ejercicio1.html
+     Formulario para el calculo de compras
+     Campos: nombre, edad, cantidad de tarros de pintura
+     ============================================================ -->
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
   <meta charset="UTF-8">
-  <title>$Title$</title>
+  <title>Calculo de compras</title>
+  <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-$END$
+  <div class="container">
+    <h2>Calculo de compras</h2>
+
+    <form method="post" class="form-card">
+      <label class="label" for="nombre">Ingresa tu nombre</label>
+      <input class="input" type="text" id="nombre" name="nombre" placeholder="Tu nombre" required>
+
+      <label class="label" for="edad">Ingresa tu edad</label>
+      <input class="input" type="number" id="edad" name="edad" placeholder="Tu edad" min="0" required>
+
+      <label class="label" for="cantidad">Ingresa la cantidad de tarros de pintura a comprar</label>
+      <input class="input" type="number" id="cantidad" name="cantidad" placeholder="Cantidad" min="0" required>
+
+      <button class="btn" type="submit">Calcular</button>
+    </form>
+  </div>
 </body>
 </html>
