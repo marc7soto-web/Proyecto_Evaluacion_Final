@@ -1,0 +1,116 @@
+/* ============================================================
+   Archivo: static/style.css
+   Estilos base y colores de los botones del menú
+   ============================================================ */
+
+:root {
+  --magenta: #ff00aa;
+  --lime: #32cd32;
+  --bg: #f5f6fa;
+  --text: #222;
+  --primary: #1e90ff;
+}
+
+* { box-sizing: border-box; }
+
+body {
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  margin: 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 24px;
+  text-align: center;
+}
+
+h1, h2 {
+  margin: 8px 0 16px 0;
+}
+
+.menu {
+  display: flex;
+  justify-content: center;
+  gap: 24px;
+  flex-wrap: wrap;
+  margin-top: 24px;
+}
+
+.menu a {
+  display: inline-block;
+  width: 220px;
+  height: 120px;
+  line-height: 120px;
+  font-size: 22px;
+  font-weight: bold;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 12px;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+.menu a#ej1 { background-color: var(--magenta); }
+.menu a#ej2 { background-color: var(--lime); }
+
+.menu a:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(0,0,0,0.2);
+}
+
+.form-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 540px;
+  margin: 24px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+  text-align: left;
+}
+
+.label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+}
+
+.input {
+  width: 100%;
+  padding: 10px 12px;
+  margin-bottom: 16px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.btn {
+  background-color: var(--primary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  padding: 10px 16px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  opacity: 0.92;
+}
+
+.result {
+  background: #fff;
+  border-radius: 12px;
+  padding: 24px;
+  max-width: 540px;
+  margin: 24px auto;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.1);
+}
+
+.error {
+  color: #b00020;
+  font-weight: bold;
+  margin-top: 8px;
+}
